@@ -5,9 +5,13 @@ module.exports = () => { // mongodb 연결하는 부분임. 크게 의미 x
     if (process.env.NODE_ENV !== "production") {
       mongoose.set("debug", true);
     }
+    const db = require("../config/keys").mongoURI;
+
     mongoose.connect(
-      "mongodb://localhost:27017/til",
+      db,
       {
+        useNewUrlParser: true,
+        useUnifiedTopology: true, 
         dbName: "til"
       },
       error => {

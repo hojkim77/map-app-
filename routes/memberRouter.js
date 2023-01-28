@@ -4,7 +4,7 @@ const User = require("../schemas/user");
 const crypto = require("crypto");
 
 //회원가입
-router.post("/join", async (req, res) => {
+router.post("/join", async (req, res) => { //react 프론트 부분에서 ~/member/join으로 보내면 여기 post를 타게된다.
   try {
     let obj = { email: req.body.email };
 
@@ -12,7 +12,7 @@ router.post("/join", async (req, res) => {
     console.log(user);
 
     if (user) {
-      res.json({
+      res.json({ //user가 (res = 응답) 이러한 json형식의 응답을 넘겨준다
         message: "이메일이 중복되었습니다. 새로운 이메일을 입력해주세요.",
         dupYn: "1"
       });

@@ -5,7 +5,7 @@ const session = require("express-session")
 const connect = require("./schemas");
 connect();
 
-const corsOption = {
+const corsOptions = {
     origin:true,
     credentials: true
 }
@@ -21,6 +21,7 @@ app.use( //session 관련된 설정을 해줌
         }
     })
 )
+app.use(cors(corsOptions));
 
 app.use(express.json()); // express에서 json형식을 사용하기 위함
 app.use(express.urlencoded({extended:true})); //express에서 다양한 구조 자료형들을 사용하기 위함
