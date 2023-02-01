@@ -143,7 +143,9 @@ router.post("/login", async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.json({ message: "로그인 실패" });
+    console.log("what")
+    console.log(err);
+    //res.json({ message: "로그인 실패", err: err });
   }
 });
 

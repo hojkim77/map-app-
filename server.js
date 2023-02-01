@@ -6,8 +6,14 @@ const connect = require("./schemas");
 connect();
 
 const corsOptions = {
-    origin:true,
-    credentials: true
+    /*headers:{
+        "preflightContinue": false,
+        'Access-Control-Allow-Originigin':'https://api.openweathermap.org',
+    }*/
+    "origin":true,
+    "credential":true,
+
+
 }
 
 app.use( //session 관련된 설정을 해줌
