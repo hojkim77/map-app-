@@ -32,5 +32,5 @@ module.exports = () => { // mongodb 연결하는 부분임. 크게 의미 x
     connect();
   });
   require("./user"); //user 스키마 사용
-  //require("./board"); 
+  require("./todo"); //todo 스키마 사용
 };

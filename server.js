@@ -33,6 +33,7 @@ app.use(express.json()); // express에서 json형식을 사용하기 위함
 app.use(express.urlencoded({extended:true})); //express에서 다양한 구조 자료형들을 사용하기 위함
 
 app.use('/member', require('./routes/memberRouter')) // 서버의 역할을 route를 사용하여 나눠줌
+app.use('/todo', require('./routes/todoRouter')) // 서버의 역할을 route를 사용하여 나눠줌
 
 app.listen(8080, () => {
     console.log("success listening 8080!!")
